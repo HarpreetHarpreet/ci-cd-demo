@@ -1,0 +1,19 @@
+name: CI Demo1
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run script
+        run: |
+          chmod +x script.sh
+          ./script.sh
